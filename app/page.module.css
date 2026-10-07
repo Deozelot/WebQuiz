@@ -127,3 +127,120 @@
   font-size: 1.125rem;
   line-height: 1.6;
 }
+
+.timerDisplay {
+  font-size: 1.5rem;
+}
+
+.timerButtons {
+  display: flex;
+  gap: 12px;
+}
+
+.timerButton {
+  min-width: 96px;
+  padding: 14px 20px;
+  border: none;
+  font: inherit;
+  font-size: 1.125rem;
+  cursor: pointer;
+}
+
+.timerButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.start {
+  background: #9ba77a;
+}
+
+.stop {
+  background: #f4a58e;
+}
+
+.reset {
+  background: #f7eaa6;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 16px 32px;
+  margin-bottom: 8px;
+  background: #2b3035;
+  color: #fff;
+}
+
+.mirrored {
+  transform: scaleX(-1);
+}
+
+.brand {
+  font-size: 1.5rem;
+}
+
+.navLinks {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  font-size: 1.125rem;
+}
+
+.navLink {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.navLink:hover,
+.activeLink {
+  color: #fff;
+}
+
+.search {
+  margin-left: auto;
+  display: flex;
+  gap: 16px;
+}
+
+.searchInput {
+  width: 300px;
+  padding: 10px 16px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font: inherit;
+  font-size: 1.125rem;
+}
+
+.searchButton {
+  padding: 10px 20px;
+  border: 1px solid #0dcaf0;
+  border-radius: 6px;
+  background: transparent;
+  color: #0dcaf0;
+  font: inherit;
+  font-size: 1.125rem;
+  cursor: pointer;
+}
+
+.searchButton:hover {
+  background: #0dcaf0;
+  color: #000;
+}
+
+@media (max-width: 720px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .search {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .searchInput {
+    flex: 1;
+    width: auto;
+  }
+}
