@@ -1,150 +1,129 @@
 .page {
-  --background: #fafafa;
-  --foreground: #fff;
-
-  --text-primary: #000;
-  --text-secondary: #666;
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-  --button-secondary-border: #ebebeb;
-
-  display: flex;
   flex: 1;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-family: var(--font-geist-sans);
-  background-color: var(--background);
+  gap: 32px;
+  padding: 24px;
 }
 
-.main {
-  display: flex;
-  flex: 1;
-  width: 100%;
-  max-width: 800px;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  background-color: var(--foreground);
-  padding: 120px 60px;
-}
-
-.intro {
+.card {
+  width: min(560px, 100%);
+  border: 8px solid #a39d8f;
+  padding: 48px 72px 72px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
+  align-items: center;
   gap: 24px;
 }
 
-.intro h1 {
-  max-width: 320px;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 48px;
-  letter-spacing: -2.4px;
-  text-wrap: balance;
-  color: var(--text-primary);
-}
-
-.intro p {
-  max-width: 440px;
-  font-size: 18px;
-  line-height: 32px;
-  text-wrap: balance;
-  color: var(--text-secondary);
-}
-
-.intro a {
+.title {
+  font-size: 2rem;
   font-weight: 500;
-  color: var(--text-primary);
 }
 
-.ctas {
-  display: flex;
-  flex-direction: row;
+.track {
   width: 100%;
-  max-width: 440px;
-  gap: 16px;
-  font-size: 14px;
+  height: 20px;
+  border-radius: 999px;
+  background: #d6d6d6;
+  overflow: hidden;
 }
 
-.ctas a {
+.fill {
+  height: 100%;
+  min-width: fit-content;
+  border-radius: 999px;
+  background: #e5533d;
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 40px;
-  padding: 0 16px;
-  border-radius: 128px;
-  border: 1px solid transparent;
-  transition: 0.2s;
+  padding: 0 8px;
+  transition: width 0.3s ease;
+}
+
+.label {
+  font-size: 0.75rem;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.inputRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.125rem;
+}
+
+.input {
+  width: 80px;
+  height: 36px;
+  padding: 0 12px;
+  border: 2px solid #a39d8f;
+  border-radius: 999px;
+  font: inherit;
+  text-align: center;
+  outline: none;
+}
+
+.input:focus {
+  border-color: #e5533d;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 1.125rem;
+}
+
+.field input {
+  width: 260px;
+  height: 32px;
+  padding: 0 8px;
+  border: 1px solid #a39d8f;
+  font: inherit;
+  font-size: 1rem;
+}
+
+.field input:focus {
+  outline: 2px solid #e5533d;
+  outline-offset: 1px;
+}
+
+.submit {
+  padding: 6px 16px;
+  border: 1px solid #a39d8f;
+  background: #f0eee9;
+  font: inherit;
   cursor: pointer;
-  width: fit-content;
-  font-weight: 500;
 }
 
-a.primary {
-  background: var(--text-primary);
-  color: var(--background);
-  gap: 8px;
+.submit:hover {
+  background: #e5e2db;
 }
 
-a.secondary {
-  border-color: var(--button-secondary-border);
+.result {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
+.resultTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
 }
 
-@media (max-width: 600px) {
-  .main {
-    padding: 48px 24px;
-  }
-
-  .intro {
-    gap: 16px;
-  }
-
-  .intro h1 {
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: -1.92px;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
-
-  .page {
-    --background: #000;
-    --foreground: #000;
-
-    --text-primary: #ededed;
-    --text-secondary: #999;
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-    --button-secondary-border: #1a1a1a;
-  }
-}
-
-.code {
-  font-family: var(--font-geist-mono);
-  font-size: 0.9em;
-  background: color-mix(in srgb, currentColor 8%, transparent);
-  padding: 0.1em 0.4em;
-  border-radius: 6px;
+.resultList {
+  padding-left: 32px;
+  font-size: 1.125rem;
+  line-height: 1.6;
 }
